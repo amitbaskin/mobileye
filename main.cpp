@@ -32,25 +32,25 @@ void bfs(std::vector<std::vector<int>> &A, std::map<std::array<unsigned int, 2>,
     std::map<std::array<unsigned int, 2>, bool>::iterator it;
 
     cur_r = r - 1;
-    if (cur_r > -1){
+    if ((int) cur_r > -1){
         cur_c = c;
         helper(A, map, queue, cur_r, cur_c, val);
     }
 
     cur_c = c + 1;
-    if (cur_c < cols){
+    if ((int) cur_c < cols){
         cur_r = r;
         helper(A, map, queue, cur_r, cur_c, val);
     }
 
     cur_r = r + 1;
-    if (cur_r < rows){
+    if ((int) cur_r < rows){
         cur_c = c;
         helper(A, map, queue, cur_r, cur_c, val);
     }
-    
+
     cur_c = c - 1;
-    if (cur_c > -1){
+    if ((int) cur_c > -1){
         cur_r = r;
         helper(A, map, queue, cur_r, cur_c, val);
     }
@@ -92,6 +92,13 @@ int main() {
         std::vector<int>{2, 2, 3, 3},
         std::vector<int>{2, 3, 1, 1}
     };
-    std::cout << solution(A) << std::endl;
+    std::cout << solution(A) << std::endl; // == 6
+    A = std::vector<std::vector<int>>{
+        std::vector<int>{1, 3, 3, 2},
+        std::vector<int>{3, 1, 2, 3},
+        std::vector<int>{3, 2, 1, 3},
+        std::vector<int>{2, 3, 3, 1}
+    };
+    std::cout << solution(A) << std::endl; // == 12
     return 0;
 }
