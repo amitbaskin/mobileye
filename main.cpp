@@ -93,6 +93,7 @@ int main() {
         std::vector<int>{2, 3, 1, 1}
     };
     std::cout << solution(A) << std::endl; // == 6
+
     A = std::vector<std::vector<int>>{
         std::vector<int>{1, 3, 3, 2},
         std::vector<int>{3, 1, 2, 3},
@@ -100,5 +101,42 @@ int main() {
         std::vector<int>{2, 3, 3, 1}
     };
     std::cout << solution(A) << std::endl; // == 12
+
+    A = std::vector<std::vector<int>>{
+        std::vector<int>{1}
+    };
+    std::cout << solution(A) << std::endl; // == 1
+
+    A = std::vector<std::vector<int>>{
+        std::vector<int>{1, 1, 1, 1},
+        std::vector<int>{1, 1, 1, 1},
+        std::vector<int>{1, 1, 1, 1},
+        std::vector<int>{1, 1, 1, 1}
+    };
+    std::cout << solution(A) << std::endl; // == 1
+
+    A = std::vector<std::vector<int>>{
+        std::vector<int>{1, 1, 1, 1},
+        std::vector<int>{1, 1, 2, 1},
+        std::vector<int>{1, 2, 1, 1},
+        std::vector<int>{1, 1, 1, 1}
+    };
+    std::cout << solution(A) << std::endl; // == 3
+
+    A = std::vector<std::vector<int>>{
+        std::vector<int>{1, 1, 1, 2},
+        std::vector<int>{1, 1, 2, 1},
+        std::vector<int>{1, 2, 1, 1},
+        std::vector<int>{2, 1, 1, 1}
+    };
+    std::cout << solution(A) << std::endl; // == 6
+
+    A = std::vector<std::vector<int>>{
+        std::vector<int>{2, 1, 1, 2},
+        std::vector<int>{1, 1, 2, 1},
+        std::vector<int>{1, 2, 1, 1},
+        std::vector<int>{2, 1, 1, 2}
+    };
+    std::cout << solution(A) << std::endl; // == 8
     return 0;
 }
